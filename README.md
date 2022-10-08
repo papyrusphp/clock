@@ -1,4 +1,11 @@
 # 📜 Papyrus Clock
+[![Build Status](https://scrutinizer-ci.com/g/papyrusphp/clock/badges/build.png?b=main)](https://github.com/papyrusphp/clock/actions)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/papyrusphp/clock.svg?style=flat)](https://scrutinizer-ci.com/g/papyrusphp/clock/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/papyrusphp/clock.svg?style=flat)](https://scrutinizer-ci.com/g/papyrusphp/clock)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
+[![Packagist Version](https://img.shields.io/packagist/v/papyrus/clock.svg?style=flat&include_prereleases)](https://packagist.org/packages/papyrus/clock)
+[![PHP Version](https://img.shields.io/badge/php-%5E8.1-8892BF.svg?style=flat)](http://www.php.net)
+
 A Clock implementation (inspired by PSR-20) for [papyrus/event-sourcing](https://github.com/papyrusphp/event-sourcing).
 
 This library contains both an interface (the contract) as a simple 'system' implementation for a Clock.
