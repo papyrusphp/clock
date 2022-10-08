@@ -1,6 +1,6 @@
 {
     "name": "papyrus/clock",
-    "description": "Clock (PSR-20) implementation for papyrus/event-sourcing",
+    "description": "A Clock implementation (inspired by PSR-20) for papyrus/event-sourcing",
     "license": "MIT",
     "type": "library",
     "keywords": [
