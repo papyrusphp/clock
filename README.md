@@ -37,6 +37,13 @@ return [
 A Symfony YAML-file definition:
 ```yaml
 services:
-    Papyrus\Clock\Clock:
-        class: Papyrus\Clock\System\SystemClock
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  # Other definitions
+  # ...
+  
+  Papyrus\Clock\Clock:
+    class: Papyrus\Clock\System\SystemClock
 ```
