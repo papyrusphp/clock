@@ -15,7 +15,7 @@ Usable in [papyrus/event-store](https://github.com/papyrusphp/event-store).
 ## Installation
 Install via composer:
 ```bash
-$ composer install papyrus/clock
+composer require papyrus/clock
 ```
 
 ## Configuration
