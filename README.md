@@ -6,9 +6,9 @@
 [![Packagist Version](https://img.shields.io/packagist/v/papyrus/clock.svg?style=flat&include_prereleases)](https://packagist.org/packages/papyrus/clock)
 [![PHP Version](https://img.shields.io/badge/php-%5E8.1-8892BF.svg?style=flat)](http://www.php.net)
 
-A Clock implementation (inspired by PSR-20) for [papyrus/event-sourcing](https://github.com/papyrusphp/event-sourcing).
+A Clock implementation ([PSR-20](https://github.com/php-fig/clock)) for [papyrus/event-sourcing](https://github.com/papyrusphp/event-sourcing).
 
-This library contains both an interface (the contract) as a simple 'system' implementation for a Clock.
+This library contains a simple 'system' implementation for a Clock.
 
 Usable in [papyrus/event-store](https://github.com/papyrusphp/event-store).
 
@@ -19,19 +19,19 @@ composer require papyrus/clock
 ```
 
 ## Configuration
-Bind your own implementation or the included `SystemClock` to the interface `Clock` in your service definitions, e.g.:
+Bind your own implementation or the included `SystemClock` to the interface `ClockInterface` in your service definitions, e.g.:
 
 A plain PHP PSR-11 Container definition:
 ```php
-use Papyrus\Clock\Clock;
 use Papyrus\Clock\System\SystemClock;
+use Psr\Clock\ClockInterface;
 use Psr\Container\ContainerInterface;
 
 return [
     // Other definitions
     // ...
 
-    Clock::class => static fn (ContainerInterface $container): Clock => new SystemClock(),
+    ClockInterface::class => static fn (ContainerInterface $container): ClockInterface => new SystemClock(),
 ];
 ```
 A Symfony YAML-file definition:
@@ -43,7 +43,7 @@ services:
 
   # Other definitions
   # ...
-  
-  Papyrus\Clock\Clock:
+
+  Psr\Clock\ClockInterface:
     class: Papyrus\Clock\System\SystemClock
 ```
