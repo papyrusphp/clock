@@ -19,7 +19,8 @@
         }
     ],
     "require": {
-        "php": "^8.1"
+        "php": "^8.1",
+        "psr/clock": "^1.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.11",
@@ -28,6 +29,9 @@
         "phpstan/phpstan": "^1.8",
         "phpunit/phpunit": "^9.5",
         "scrutinizer/ocular": "^1.9"
+    },
+    "provide": {
+        "psr/clock-implementation": "1.0"
     },
     "autoload": {
         "psr-4": {

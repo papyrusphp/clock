@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Papyrus\Clock\System;
 
 use DateTimeImmutable;
-use Papyrus\Clock\Clock;
+use Psr\Clock\ClockInterface;
 
-final class SystemClock implements Clock
+final class SystemClock implements ClockInterface
 {
     public function now(): DateTimeImmutable
     {
